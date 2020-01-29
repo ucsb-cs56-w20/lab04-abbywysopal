@@ -142,7 +142,7 @@ public class OperationsController {
         logger.info("getMultiplyResult ratCalcForm=" + ratCalcForm);
         ratCalcForm.setOp("/");
 
-        if (!bindingResult.hasErrors() && !checkDenominatorErrors(ratCalcForm)) {
+        if (!bindingResult.hasErrors() && !checkDenominatorErrors(ratCalcForm) && !!checkDenominatorErrors(ratCalcForm.getNum2())) {
             Rational r1 = new Rational(ratCalcForm.getNum1(), ratCalcForm.getDenom1());
             Rational r2 = new Rational(ratCalcForm.getNum2(), ratCalcForm.getDenom2());
             Rational result = Rational.quotient(r1, r2);
