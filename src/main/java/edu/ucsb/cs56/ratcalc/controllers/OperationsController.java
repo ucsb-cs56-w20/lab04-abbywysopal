@@ -112,7 +112,7 @@ public class OperationsController {
     }
 
     @GetMapping("/multiply/results")
-    public String getSubtractResult(Model model, @Valid RatCalcForm ratCalcForm, BindingResult bindingResult) {
+    public String getMultiplytResult(Model model, @Valid RatCalcForm ratCalcForm, BindingResult bindingResult) {
         logger.info("getMultiplyResult ratCalcForm=" + ratCalcForm);
         ratCalcForm.setOp("x");
 
@@ -138,7 +138,7 @@ public class OperationsController {
     }
 
     @GetMapping("/divide/results")
-    public String getSubtractResult(Model model, @Valid RatCalcForm ratCalcForm, BindingResult bindingResult) {
+    public String getDivideResult(Model model, @Valid RatCalcForm ratCalcForm, BindingResult bindingResult) {
         logger.info("getMultiplyResult ratCalcForm=" + ratCalcForm);
         ratCalcForm.setOp("/");
 
